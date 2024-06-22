@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './Login.css'
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -16,13 +16,15 @@ function Login() {
     <div className="container">
       <form onSubmit={handleSubmit}>
         <h1>Acesse o sistema</h1>
-        <div>
+        <div className="input-field">
+
           <input type="email" placeholder="E-mail" onChange={(e) =>{
             setUsername(e.target.value)
           }} />
         </div>
-        <div>
-          <input type="password" placeholder="senha" onChange={(e)=>{
+        <div className="input-field">
+
+          <input  type="password" placeholder="senha" onChange={(e)=>{
             setPassword(e.target.value)
           }} />
         </div>
